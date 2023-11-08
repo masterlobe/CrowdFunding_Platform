@@ -1,0 +1,171 @@
+/* Add basic CSS for styling the navigation bar */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #7faeb8;
+    overflow: hidden;
+}
+
+li.nav-item {
+    float: left;
+}
+
+li.nav-item a {
+    display: block;
+    color: rgb(20, 19, 19);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.nav-item a:hover {
+    color: darkgrey;
+}
+
+
+/* Add CSS for styling the image with text */
+.image-with-text {
+    display: flex; /* Use a flexbox layout */
+    align-items: center; /* Vertically center the items */
+}
+
+/* Style the image */
+.image-with-text img {
+    max-width: 50%; /* Adjust the image width as needed */
+}
+
+/* Style the text */
+.image-with-text div {
+    margin-left: 20px; /* Add some space between the image and text */
+}
+
+.image-with-text div {
+    flex: 1; /* Make the text element flex to cover available space */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.image-with-text .moving-text{
+    flex: 1; /* Make the text element flex to cover available space */
+    padding: 20px; /* Add padding for spacing */
+
+    /* Add CSS animation for the bottom-to-top effect */
+    animation: moveUp 1s ease-in-out;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%); /* Start from below the container */
+        opacity: 0; /* Start with 0 opacity */
+    }
+    100% {
+        transform: translateY(0); /* Move to the top of the container */
+        opacity: 1; /* Fade in with full opacity */
+    }
+}
+
+.defining{
+    padding-top: 50px;
+}
+
+/* Create a grid layout using CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    grid-gap: 10px; /* Add spacing between grid items */
+    max-width: 600px; /* Optional: Limit the width of the grid container */
+    margin: 0 auto; /* Optional: Center the grid container on the page */
+    background-color: #f0f0f0; /* Set a background color for the container */
+    border: 2px solid transparent; /* Set a transparent initial border */
+    border-radius: 10px; /* Add rounded corners to the container */
+    padding: 10px; /* Add padding around the container */
+    background-clip: content-box; /* Clip the background to the content box */
+    position: relative; /* Required for pseudo-element */
+}
+
+/* Pseudo-element to create a fading border */
+.grid-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(to right, transparent, #f0f0f0, transparent);
+    pointer-events: none; /* Allow clicks and hovers to pass through */
+}
+
+/* Style the grid items */
+.grid-item {
+    background-color: #26c4d3;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    position: relative; /* Required for pseudo-element */
+}
+/* Set the background image */
+.background-container {
+    background-image: url('background.avif'); /* Specify the image URL */
+    background-size: cover; /* Adjust to 'contain' for a different effect */
+    background-repeat: no-repeat; /* Prevent image repetition */
+     /* Optional: Fixed background for scrolling */
+    height: 740px; /* Set a fixed height for the container */
+    position: relative; /* Required for pseudo-element */
+}
+
+/* Create a gradient overlay to fade from purple to white at the bottom */
+
+/* CSS for the Donate Button */
+.donate-button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding to control button size */
+    background-color: #0073e6; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.donate-button:hover {
+    background-color: #00aaff; /* Change background color on hover */
+}
+
+
+/* CSS for the About Us Section */
+#about-us-section {
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+    padding: 40px 0; /* Adjust padding for spacing */
+    text-align: center;
+}
+
+.about-us-content {
+    max-width: 800px; /* Limit the content width */
+    margin: 0 auto; /* Center the content */
+    padding: 20px 20px 0px 20px;
+}
+
+.about-us-content h2 {
+    font-size: 24px; /* Adjust the heading size */
+}
+
+.about-us-content p {
+    font-size: 16px; /* Adjust the paragraph text size */
+}
+
+
+/* Add CSS for the loading bar */
+.loading-bar {
+    display: none;
+    width: 100%;
+    height: 3px;
+    background-color: #0074D9; /* Blue loading bar color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: width 1s; /* Adjust the transition duration as needed */
+}
